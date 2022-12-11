@@ -16,12 +16,11 @@ def add_to_list():
     B2.pack()
     frame2.mainloop()
 
-def list_addition(canvas1):
-   string=  canvas1.get()
-   print(string)
-
 def b1():
     slist = []
+    def list_addition():
+        slist.append(x.get()) 
+        print(slist)
     frame3 = tk.Tk()
     canvas1 = tk.Canvas(frame3, width=400, height=300)
     canvas1.pack()
@@ -29,8 +28,6 @@ def b1():
     canvas1.create_window(200, 140, window=x)
     label1 = tk.Label(frame3, text=x)
     canvas1.create_window(200, 230, window=label1)
-    x = x.get()
-    slist = slist.append(x)
     addbutton = tk.Button(frame3, text = "add", command = list_addition)
     addbutton.place(x = 180, y = 200)
     frame3.mainloop()
