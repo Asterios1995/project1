@@ -15,22 +15,25 @@ def add_to_list():
     B1.pack()
     B2.pack()
     frame2.mainloop()
-
+    # leads user to the adding frame
+slist = []
 def b1():
-    slist = []
+     #empty list where items will be stored
     def list_addition():
-        slist.append(x.get()) 
+        slist.append(x.get()) #function we call upon for the add button that appends what we enter into the list 
         print(slist)
+        return slist  
     frame3 = tk.Tk()
     canvas1 = tk.Canvas(frame3, width=400, height=300)
     canvas1.pack()
-    x = tk.Entry(frame3)
+    x = tk.Entry(frame3) #entry frame
     canvas1.create_window(200, 140, window=x)
     label1 = tk.Label(frame3, text=x)
     canvas1.create_window(200, 230, window=label1)
-    addbutton = tk.Button(frame3, text = "add", command = list_addition)
+    addbutton = tk.Button(frame3, text = "add", command = list_addition) #what creates the button we will use to add to the list
     addbutton.place(x = 180, y = 200)
     frame3.mainloop()
+    return slist
 
     
 
