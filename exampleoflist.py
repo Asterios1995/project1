@@ -22,6 +22,7 @@ def b1():
     def list_addition():
         slist.append(x.get()) #function we call upon for the add button that appends what we enter into the list 
         print(slist)
+        x.delete(0, END)
         return slist  
     frame3 = tk.Tk()
     canvas1 = tk.Canvas(frame3, width=400, height=300)
@@ -35,15 +36,35 @@ def b1():
     frame3.mainloop()
     return slist
 
+def removefromlist():
+    frame_delete = tk.Tk()
+    #try :
+    for i in range(len(slist)):
+        tk.Button(frame_delete, text = slist[i]).pack() 
+
+    #except:
+        #pass 
+
+    
+
+
+
+
+
+
+
+
+
     
 
 def viewlist ():
-    msg.showinfo( "list", )
+    msg.showinfo("shopping list", slist)
+
 
 
 
 B = tk.Button(frame, text = "add to list", command = add_to_list)
-B2 = tk.Button(frame, text= "remove from list" )
+B2 = tk.Button(frame, text= "remove from list", command = removefromlist )
 B3 = tk.Button(frame, text = "view list ", command = viewlist)
 
 
