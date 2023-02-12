@@ -1,2 +1,3 @@
-print("hello")
-print(2)
+s = ["a","b"]
+s.("a")
+print(s)

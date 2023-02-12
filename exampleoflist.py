@@ -38,12 +38,15 @@ def b1():
 
 def removefromlist():
     frame_delete = tk.Tk()
+    def delete():
+            slist.remove(slist[i])
     #try :
     for i in range(len(slist)):
-        tk.Button(frame_delete, text = slist[i]).pack() 
+        tk.Button(frame_delete, text = slist[i], command= delete  ).pack() #creates dynamic buttons
 
     #except:
-        #pass 
+        #msg.showinfo("your list is empty")
+        
 
     
 
